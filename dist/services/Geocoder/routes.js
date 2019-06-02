@@ -19,7 +19,7 @@ exports.default = [
         })
     },
     {
-        path: "/api/v1/search",
+        path: "/api/v1/geocode",
         method: "get",
         handler: [
             checks_1.checkSearchParams,

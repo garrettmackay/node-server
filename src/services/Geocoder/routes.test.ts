@@ -19,16 +19,16 @@ describe("routes", () => {
   });
 
   test("a valid string query", async () => {
-    const response = await request(router).get("/api/v1/search?q=Provo Utah");
+    const response = await request(router).get("/api/v1/geocode?q=Provo Utah");
     expect(response.status).toEqual(200);
   });
   test("a non-existing api method", async () => {
-    const response = await request(router).get("/api/v11/search");
+    const response = await request(router).get("/api/v11/geocode");
     expect(response.status).toEqual(404);
   });
   
   test("an empty string", async () => {
-    const response = await request(router).get("/api/v1/search?q=");
+    const response = await request(router).get("/api/v1/geocode?q=");
     expect(response.status).toEqual(400);
   });
 });
