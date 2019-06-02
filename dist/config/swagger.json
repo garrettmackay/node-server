@@ -8,7 +8,7 @@
     "schemes": ["http"],
     "produces": ["application/json"],
     "paths": {
-        "/search": {
+        "/geocoder": {
             "get": {
                 "tags": ["Search Text"],
                 "summary": "Search by places using opencagedata service",
